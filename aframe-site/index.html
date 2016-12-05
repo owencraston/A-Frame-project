@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/0.3.2/aframe.min.js"></script>
+    <script src="https://rawgit.com/donmccurdy/aframe-extras/v2.1.1/dist/aframe-extras.loaders.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <h1> A-Frame Project</h1>
+    <h2> This project was created with the intent of experimenting with the Mozzilla A-Frame VR framework.</h2>
+    <h3> The image below was created from scratch using Magic Voxel and is a voxel represnetation of the Shopify logo.</h3>
+    <h4> Drag with mouse to look around and use WASD to move around inside the view</h4>
+
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <a-asset-item id="myModelObj" src="Shopify.obj"></a-asset-item>
+        <a-asset-item id="myModelMtl" src="Shopify.mtl"></a-asset-item>
+      </a-assets>
+
+      <!--<a-entity camera look-controls wasd-controls></a-entity>-->
+
+      <a-entity camera look-controls wasd-controls>
+        <a-entity position = "0 30 100">
+      </a-entity>
+
+      <a-entity position = "0 30 100">
+        <a-camera></a-camera>
+      </a-entity>
+
+      <a-entity obj-model="obj: #myModelObj; mtl: #myModelMtl">
+        <a-entity scale="0.1 0.1 0.1"></a-entity>
+      </a-entity>
+    </a-scene>
+  </body>
+</html>
